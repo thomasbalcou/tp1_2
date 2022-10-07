@@ -17,18 +17,18 @@ public class RDVDao extends AbstractJpaDao<Long, RDV>{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public RDV getRDVLibelle(String libelle) {
+	public List<RDV> getRDVLibelle(String libelle) {
 		String query = "select f from RDV as f " + "where f.libelle = :libelle";
-		return EntityManagerHelper.getEntityManager().createQuery(query, RDV.class).setParameter("libelle", libelle).getSingleResult();
+		return EntityManagerHelper.getEntityManager().createQuery(query, RDV.class).setParameter("libelle", libelle).getResultList();
 	}
 	
-	public RDV getRDVUser(String mail) {
+	public List<RDV> getRDVUser(String mail) {
 		String query = "select f from RDV as f " + "where f.pro_mail = :mail";
-		return EntityManagerHelper.getEntityManager().createQuery(query, RDV.class).setParameter("mail", mail).getSingleResult();
+		return EntityManagerHelper.getEntityManager().createQuery(query, RDV.class).setParameter("mail", mail).getResultList();
 	}
-	public RDV getRDVPro(String mail) {
+	public List<RDV> getRDVPro(String mail) {
 		String query = "select f from RDV as f " + "where f.user_mail = :mail";
-		return EntityManagerHelper.getEntityManager().createQuery(query, RDV.class).setParameter("mail", mail).getSingleResult();
+		return EntityManagerHelper.getEntityManager().createQuery(query, RDV.class).setParameter("mail", mail).getResultList();
 	}
 
 
