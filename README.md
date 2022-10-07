@@ -2,9 +2,9 @@
 # TP1 et TP2
 
 
-![Screenshot](diagramme.drawio.png)
-
 ## Modèle de données
+
+![Screenshot](diagramme.drawio.png)
 
 ## Partie JPA
 
